@@ -13,35 +13,12 @@ function generate(item, container) {
   const label = document.createElement('label');
   div.appendChild(label);
   div.appendChild(input);
-  input.addEventListener('change', taskStatus);
-  // text editable input-- task text
-  const taskDescription = document.createElement('input');
-  taskDescription.value = element.description;
-  div.appendChild(taskDescription);
-  taskDescription.classList.add('taskDescription');
-  // div.innerHTML += element.description;
   const dotIcon = document.createElement('img');
   dotIcon.setAttribute('src', './assets/images/dot.png');
   dotIcon.classList.add('dotIcon');
   li.appendChild(dotIcon);
   li.classList.add(`index${element.index}`);
-  li.addEventListener('click', editingTask);
 }
-
-const addTask = (e) => {
-    if (e.keyCode === 13) {
-      const list = JSON.parse(localStorage.getItem('Tasks'));
-      const item = {
-        description: input.value,
-        completed: false,
-        index: list.length,
-      };
-      input.value = '';
-      list.push(item);
-      generateItems(list, ul);
-      updateLocalStorage(list);
-    }
-  };
 
 const generateItems = (tasksList, ul) => {
   for (let j = 0; j < tasksList.length; j += 1) {
@@ -51,8 +28,22 @@ const generateItems = (tasksList, ul) => {
   }
 };
 
-const userActionHandler = () => {
-    input.addEventListener('keypress', addTask);
-  };
+const addTask = (e) => {
+  if (e.keyCode === 13) {
+    const list = JSON.parse(localStorage.getItem('Tasks'));
+    const item = {
+      description: input.value,
+      completed: false,
+      index: list.length,
+    };
+    input.value = '';
+    list.push(item);
+    generateItems(list, ul);
+  }
+};
 
-  userActionHandler();
+const userActionHandler = () => {
+  input.addEventListener('keypress', addTask);
+};
+
+userActionHandler();
