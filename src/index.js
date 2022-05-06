@@ -1,4 +1,5 @@
 import './style.css';
+
 const ul = document.querySelector('body ul');
 const input = document.getElementById('add-input');
 
