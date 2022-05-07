@@ -8,7 +8,7 @@ import { initStorage } from './modules/localStorage.js';
 import taskStatus from './modules/taskStatus.js';
 import butonHandler from './modules/clearAll.js';
 
-butonHandler;
+butonHandler();
 userActionHandler();
 window.addEventListener('load', initStorage);
 window.addEventListener('load', taskStatus);
