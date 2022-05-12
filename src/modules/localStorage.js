@@ -1,6 +1,6 @@
-import { generateItems } from './generateli.js';
-import tasksList from './tasksList.js';
-import { ul } from './htmlElements.js';
+import { generateItems } from './generateli';
+import tasksList from './tasksList';
+import { ul } from './htmlElements';
 
 function updateLocalStorage(tL = tasksList) {
   localStorage.setItem('Tasks', JSON.stringify(tL));

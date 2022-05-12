@@ -1,5 +1,5 @@
-import { editingTask } from './editingTask.js';
-import taskStatus from './taskStatus.js';
+import { editingTask } from './editingTask';
+import taskStatus from './taskStatus';
 
 function generate(item, container) {
   const div = document.createElement('div');

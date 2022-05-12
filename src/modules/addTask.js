@@ -1,5 +1,5 @@
-import { updateLocalStorage } from './localStorage.js';
-import { generateItems } from './generateli.js';
+import { updateLocalStorage } from './localStorage';
+import { generateItems } from './generateli';
 
 const add = (item) => {
   const list = JSON.parse(localStorage.getItem('Tasks'));

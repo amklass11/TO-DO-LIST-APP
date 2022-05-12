@@ -1,4 +1,4 @@
-import modifyTask from './modifyTask.js';
+import modifyTask from './modifyTask';
 
 const removeTask = (event) => {
   const elementLi = event.currentTarget.parentNode;
