@@ -1,7 +1,8 @@
-// @jest-environment jsdom;
+// @jest-environment jsdom
 
 import addTask from '../src/modules/addTask.js';
 import { removeTask } from '../src/modules/editingTask.js';
+import LocalStorageMock from '../__mocks__/localStorage.js';
 
 const html = `
 <ul>
@@ -11,6 +12,8 @@ const html = `
   </ul>
 `;
 document.body.innerHTML = html;
+global.localStorage = new LocalStorageMock();
+
 
 describe('Add task test', () => {
   test('AddTask at local storage', () => {
