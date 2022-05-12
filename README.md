@@ -1,7 +1,8 @@
-# TO-DO-LIST-APP
+# ToDo List.
 
-This  project is aimed at building a beautiful TO DO LIST APP WEBSITE.
-where users can add and delte books
+"To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
+
+[![Minimalist example](https://camo.githubusercontent.com/d04bee7a5b8f62cc6655dbec65c4d14583e4d78d0c434ddc070f6881bb9568fc/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f416355642d5f596a6a71672f302e6a7067)](https://www.youtube.com/watch?v=AcUd-_Yjjqg)
 
 ## Built With
 

@@ -1,5 +1,5 @@
-import { input } from './htmlElements.js';
-import addTask from './addTask.js';
+import { input } from './htmlElements';
+import addTask from './addTask';
 
 const userActionHandler = () => {
   input.addEventListener('keypress', addTask);

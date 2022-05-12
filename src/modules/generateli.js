@@ -1,5 +1,5 @@
-import { editingTask } from './editingTask.js';
-import taskStatus from './taskStatus.js';
+import { editingTask } from './editingTask';
+import taskStatus from './taskStatus';
 
 function generate(item, container) {
   const div = document.createElement('div');
@@ -13,12 +13,10 @@ function generate(item, container) {
   div.appendChild(label);
   div.appendChild(input);
   input.addEventListener('change', taskStatus);
-  // text editable input-- task text
   const taskDescription = document.createElement('input');
   taskDescription.value = element.description;
   div.appendChild(taskDescription);
   taskDescription.classList.add('taskDescription');
-  // div.innerHTML += element.description;
   const dotIcon = document.createElement('img');
   dotIcon.setAttribute('src', './assets/images/dot.png');
   dotIcon.classList.add('dotIcon');
