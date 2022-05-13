@@ -1,7 +1,14 @@
 import taskStatus from "../src/modules/taskStatus"
-import {removeCompletedTasks} from "../src/modules/clearAll"
+
 import addTask from '../src/modules/addTask.js';
 import modifyTask from "../src/modules/modifyTask"
+import {removeCompletedTasks} from "../src/modules/clearAll"
+import LocalStorageMock from '../__mocks__/localStorage.js';
+
+global.localStorage = new LocalStorageMock();
+
+
+
 
 
 const html = `
